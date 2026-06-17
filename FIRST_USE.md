@@ -12,22 +12,23 @@ Good enough means:
 - you know why these two matter to each other
 - you know what makes love difficult
 - you know what kind of ending the story needs
-- you have one rough structure path
-- you have one blank scene card ready for the first scene
+- you have one first scene seed
 
 ## Open these files first
 
-1. `active_pack/ND_Readable_Romance_Design_Sheet_v1.0.md`
+1. `active_pack/ND_Readable_Romance_Mini_Design_Sheet_v1.0.md`
 2. `active_pack/ND_Readable_Romance_Structure_Template_v1.0.md`
 3. `active_pack/ND_Readable_Romance_Arc_Map_v1.0.md`
 4. `active_pack/ND_Readable_Romance_Scene_Card_Template_v1.0.md`
+
+Use the full Design Sheet later if the idea needs more depth.
 
 Do not start with the checklist, triage sheet, or revision workflow.
 Those are for checking and repair.
 
 ## First workflow
 
-### Step 1 — Design Sheet
+### Step 1 — Mini Design Sheet
 
 Fill only these parts:
 
@@ -35,8 +36,9 @@ Fill only these parts:
 - why these two
 - emotional promise
 - main obstacle
-- ND truth layer
+- ND-readable truth layer
 - ending requirement
+- first scene seed
 
 Stop when you can explain the romance in plain language.
 
@@ -92,7 +94,8 @@ Stop the first session when you have:
 
 - one simple romance definition
 - one central obstacle
-- one rough arc
+- one ND-readable truth
+- one ending requirement
 - one planned scene
 
 That is enough to begin.
