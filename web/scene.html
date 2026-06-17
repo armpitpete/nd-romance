@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ND Romance Builder - Scene Card</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;line-height:1.5}header,main{max-width:1100px;margin:auto;padding:1rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}@media(max-width:800px){.grid{grid-template-columns:1fr}}section,aside{background:white;border:1px solid #d8d2c8;border-radius:16px;padding:1rem}label{display:block;font-weight:700;margin-top:.8rem}input,textarea{width:100%;font:inherit;padding:.7rem;border:1px solid #d8d2c8;border-radius:10px}textarea{min-height:80px}button{margin:.5rem .3rem .5rem 0;padding:.7rem 1rem;border:0;border-radius:999px;font-weight:700;background:#6b4fa3;color:white}pre{white-space:pre-wrap;background:#20262c;color:white;padding:1rem;border-radius:12px}a{color:#4a3477}.nav a{display:inline-block;margin-right:.7rem}.next{font-weight:700}
+</style>
+</head>
+<body>
+<header>
+<h1>Scene Card</h1>
+<p>Fourth form in the builder. Use this after the Arc Map form.</p>
+<p class="nav"><a href="./">Mini Design</a><a href="structure.html">Structure Spine</a><a href="arc.html">Arc Map</a><a class="next" href="draft.html">Draft later</a></p>
+</header>
+<main class="grid">
+<section>
+<label>Project title <input id="project"></label>
+<label>Scene title <input id="title"></label>
+<label>Chapter / position <input id="position"></label>
+<label>Point of view <input id="pov"></label>
+<label>Location <input id="location"></label>
+<label>Relationship stage at start <textarea id="stage"></textarea></label>
+<label>Scene job <textarea id="job"></textarea></label>
+<label>Person A start state <textarea id="aStart"></textarea></label>
+<label>Person B start state <textarea id="bStart"></textarea></label>
+<label>Scene conditions <textarea id="conditions"></textarea></label>
+<label>Bond evidence <textarea id="bond"></textarea></label>
+<label>Misread / accuracy map <textarea id="misread"></textarea></label>
+<label>Beat map <textarea id="beats" placeholder="1. Action / meaning&#10;2. Action / meaning"></textarea></label>
+<label>Dialogue / subtext <textarea id="dialogue"></textarea></label>
+<label>Scene-end change <textarea id="change"></textarea></label>
+<label>Keep / revise / cut decision <textarea id="decision"></textarea></label>
+<button id="copy" type="button">Copy Markdown</button>
+<button id="download" type="button">Download .md</button>
+<button id="clear" type="button">Clear</button>
+<p id="status">Autosaves in this browser.</p>
+</section>
+<aside>
+<h2>Markdown preview</h2>
+<pre id="preview"></pre>
+</aside>
+</main>
+<script>
+const ids=['project','title','position','pov','location','stage','job','aStart','bStart','conditions','bond','misread','beats','dialogue','change','decision'];
+const key='ndrb-scene-v1';
+const el=id=>document.getElementById(id);
+const v=id=>el(id).value.trim();
+function md(){return `# ${v('project')||'Untitled Project'} - Scene Card\n\n## Scene identity\n\n**Scene title:** ${v('title')}\n\n**Chapter / position:** ${v('position')}\n\n**Point of view:** ${v('pov')}\n\n**Location:** ${v('location')}\n\n**Relationship stage at start:**\n${v('stage')}\n\n## Scene job\n\n${v('job')}\n\n## Start state\n\n**Person A:**\n${v('aStart')}\n\n**Person B:**\n${v('bStart')}\n\n## Scene conditions\n\n${v('conditions')}\n\n## Bond evidence\n\n${v('bond')}\n\n## Misread / accuracy map\n\n${v('misread')}\n\n## Beat map\n\n${v('beats')}\n\n## Dialogue and subtext\n\n${v('dialogue')}\n\n## Scene-end change\n\n${v('change')}\n\n## Keep / revise / cut\n\n${v('decision')}\n\n## Next step\n\nUse this Scene Card to draft the scene.\n`;}
+function save(){const d={};ids.forEach(id=>d[id]=el(id).value);localStorage.setItem(key,JSON.stringify(d));el('preview').textContent=md();}
+function load(){const d=JSON.parse(localStorage.getItem(key)||'{}');ids.forEach(id=>{if(d[id])el(id).value=d[id];});save();}
+el('copy').onclick=async()=>{await navigator.clipboard.writeText(md());el('status').textContent='Copied.';};
+el('download').onclick=()=>{const b=new Blob([md()],{type:'text/markdown'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='scene_card.md';a.click();};
+el('clear').onclick=()=>{ids.forEach(id=>el(id).value='');localStorage.removeItem(key);save();};
+ids.forEach(id=>el(id).addEventListener('input',save));load();
+</script>
+</body>
+</html>
