@@ -5,24 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ND Romance Builder - Structure Spine</title>
 <style>
-body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;line-height:1.5}header,main{max-width:1100px;margin:auto;padding:1rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}@media(max-width:800px){.grid{grid-template-columns:1fr}}section,aside{background:white;border:1px solid #d8d2c8;border-radius:16px;padding:1rem}label{display:block;font-weight:700;margin-top:.8rem}input,textarea{width:100%;font:inherit;padding:.7rem;border:1px solid #d8d2c8;border-radius:10px}textarea{min-height:80px}button{margin:.5rem .3rem .5rem 0;padding:.7rem 1rem;border:0;border-radius:999px;font-weight:700;background:#6b4fa3;color:white}pre{white-space:pre-wrap;background:#20262c;color:white;padding:1rem;border-radius:12px}a{color:#4a3477}
+body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;line-height:1.5}header,main{max-width:1100px;margin:auto;padding:1rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}@media(max-width:800px){.grid{grid-template-columns:1fr}}section,aside{background:white;border:1px solid #d8d2c8;border-radius:16px;padding:1rem}label{display:block;font-weight:700;margin-top:.8rem}input,textarea{width:100%;font:inherit;padding:.7rem;border:1px solid #d8d2c8;border-radius:10px}textarea{min-height:80px}button{margin:.5rem .3rem .5rem 0;padding:.7rem 1rem;border:0;border-radius:999px;font-weight:700;background:#6b4fa3;color:white}pre{white-space:pre-wrap;background:#20262c;color:white;padding:1rem;border-radius:12px}a{color:#4a3477}.nav a{display:inline-block;margin-right:.7rem}.next{font-weight:700}
 </style>
 </head>
 <body>
 <header>
 <h1>Structure Spine</h1>
 <p>Second form in the builder. Use this after the Mini Design form.</p>
-<p><a href="./">Mini Design</a></p>
+<p class="nav"><a href="./">Mini Design</a><a class="next" href="arc.html">Arc Map later</a></p>
 </header>
 <main class="grid">
 <section>
 <label>Working title <input id="title"></label>
 <label>Primary pair <input id="pair"></label>
+<label>Estimated length <input id="length" placeholder="12 chapters, novella, short story"></label>
 <label>Emotional promise <textarea id="promise"></textarea></label>
 <label>Main obstacle <textarea id="obstacle"></textarea></label>
 <label>External pressure <textarea id="pressure"></textarea></label>
+<label>ND-readable truth <textarea id="truth"></textarea></label>
+<label>Ending requirement <textarea id="ending"></textarea></label>
 <label>Opening contact <textarea id="opening"></textarea></label>
 <label>Deepening bond <textarea id="bond"></textarea></label>
+<label>Midpoint change <textarea id="midpoint"></textarea></label>
+<label>Pressure / fault line <textarea id="fault"></textarea></label>
 <label>Major test <textarea id="test"></textarea></label>
 <label>Repair path <textarea id="repair"></textarea></label>
 <label>Ending proof <textarea id="proof"></textarea></label>
@@ -38,11 +43,11 @@ body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;
 </aside>
 </main>
 <script>
-const ids=['title','pair','promise','obstacle','pressure','opening','bond','test','repair','proof','chapters'];
-const key='ndrb-structure-v1';
+const ids=['title','pair','length','promise','obstacle','pressure','truth','ending','opening','bond','midpoint','fault','test','repair','proof','chapters'];
+const key='ndrb-structure-v2';
 const el=id=>document.getElementById(id);
 const v=id=>el(id).value.trim();
-function md(){return `# ${v('title')||'Untitled'} - Structure Spine\n\n## Project\n\n**Primary pair:** ${v('pair')}\n\n## Core\n\n**Emotional promise:**\n${v('promise')}\n\n**Main obstacle:**\n${v('obstacle')}\n\n**External pressure:**\n${v('pressure')}\n\n## Story path\n\n**Opening contact:**\n${v('opening')}\n\n**Deepening bond:**\n${v('bond')}\n\n**Major test:**\n${v('test')}\n\n**Repair path:**\n${v('repair')}\n\n**Ending proof:**\n${v('proof')}\n\n## Chapter spine\n\n${v('chapters')}\n`;}
+function md(){return `# ${v('title')||'Untitled'} - Structure Spine\n\n## Project\n\n**Primary pair:** ${v('pair')}\n\n**Estimated length:** ${v('length')}\n\n## Carry-over\n\n**Emotional promise:**\n${v('promise')}\n\n**Main obstacle:**\n${v('obstacle')}\n\n**External pressure:**\n${v('pressure')}\n\n**ND-readable truth:**\n${v('truth')}\n\n**Ending requirement:**\n${v('ending')}\n\n## Story path\n\n**Opening contact:**\n${v('opening')}\n\n**Deepening bond:**\n${v('bond')}\n\n**Midpoint change:**\n${v('midpoint')}\n\n**Pressure / fault line:**\n${v('fault')}\n\n**Major test:**\n${v('test')}\n\n**Repair path:**\n${v('repair')}\n\n**Ending proof:**\n${v('proof')}\n\n## Chapter spine\n\n${v('chapters')}\n\n## Next step\n\nUse this to build the Arc Map.\n`;}
 function save(){const d={};ids.forEach(id=>d[id]=el(id).value);localStorage.setItem(key,JSON.stringify(d));el('preview').textContent=md();}
 function load(){const d=JSON.parse(localStorage.getItem(key)||'{}');ids.forEach(id=>{if(d[id])el(id).value=d[id];});save();}
 el('copy').onclick=async()=>{await navigator.clipboard.writeText(md());el('status').textContent='Copied.';};
