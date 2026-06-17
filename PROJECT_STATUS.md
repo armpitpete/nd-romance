@@ -19,19 +19,23 @@ It is designed to help build romance stories that are:
 Open first:
 
 ```text
+PROJECT_STATUS.md
 FIRST_USE.md
 ```
 
-Then use:
+Then use clean blank templates from:
 
 ```text
-active_pack/ND_Readable_Romance_Mini_Design_Sheet_v1.0.md
-active_pack/ND_Readable_Romance_Structure_Template_v1.0.md
-active_pack/ND_Readable_Romance_Arc_Map_v1.0.md
-active_pack/ND_Readable_Romance_Scene_Card_Template_v1.0.md
+templates/
 ```
 
-The Mini Design Sheet is the default first file. The full Design Sheet is now a deeper second-pass file.
+Or read guidance files from:
+
+```text
+active_pack/
+```
+
+The Mini Design Sheet is the default first file. The full Design Sheet is a deeper second-pass file.
 
 ---
 
@@ -46,7 +50,9 @@ The Mini Design Sheet is the default first file. The full Design Sheet is now a 
 - Mini Design Sheet tested against Quiet Hours.
 - External-pressure prompt added to Mini Design Sheet.
 - Quiet Hours v1.1 mini test added.
-- Issues #1 to #8 closed.
+- Project status note added.
+- Clean blank templates folder added.
+- Issues #1 to #10 closed.
 
 ---
 
@@ -54,10 +60,20 @@ The Mini Design Sheet is the default first file. The full Design Sheet is now a 
 
 ### Start files
 
-- `FIRST_USE.md`
+- `README.md`
 - `PROJECT_STATUS.md`
+- `FIRST_USE.md`
 
-### Active pack
+### Blank templates
+
+- `templates/README.md`
+- `templates/mini_design_blank.md`
+- `templates/structure_spine_blank.md`
+- `templates/arc_map_blank.md`
+- `templates/scene_card_blank.md`
+- `templates/beat_tracker_blank.md`
+
+### Active pack guidance
 
 - `active_pack/ND_Readable_Romance_Mini_Design_Sheet_v1.0.md`
 - `active_pack/ND_Readable_Romance_Design_Sheet_v1.0.md`
@@ -82,7 +98,7 @@ The Mini Design Sheet is the default first file. The full Design Sheet is now a 
 
 ## Open risk
 
-The pack is now usable, but still has many large files.
+The pack is usable, but still has many large guidance files.
 
 Main risk:
 
@@ -93,18 +109,17 @@ A new user may still open too many files too soon.
 Mitigation:
 
 ```text
-Use FIRST_USE.md first. Do not start with checklist, triage, or revision files.
+Use FIRST_USE.md and templates/ first. Do not start with checklist, triage, or revision files.
 ```
 
 ---
 
 ## Next useful work
 
-1. Add a `templates/` folder with clean copyable blank forms.
-2. Create a filled example for the Structure Template using Quiet Hours.
-3. Add a short `HOW_TO_USE_WITH_GITHUB.md` note.
-4. Add a changelog.
-5. Review file naming later, because some files now say v1.0 while their content has been updated to v1.1.
+1. Create a filled example for the Structure Template using Quiet Hours.
+2. Add a short `HOW_TO_USE_WITH_GITHUB.md` note.
+3. Add a changelog.
+4. Review file naming later, because some files now say v1.0 while their content has been updated to v1.1.
 
 ---
 
@@ -115,5 +130,5 @@ Do not add more theory yet.
 The next best practical step is:
 
 ```text
-Create clean blank templates separated from guidance files.
+Create a filled Structure Template example for Quiet Hours.
 ```
