@@ -39,6 +39,7 @@ CHANGELOG.md
 VERSION_LABEL_AUDIT.md
 WEB_INTERFACE_PROTOTYPE_PLAN.md
 WEB_APP_PRODUCT_GOAL.md
+FIRST_SCENE_DRAFT_GENERATOR_PLAN.md
 web/README.md
 web/BROWSER_TEST_CHECKLIST.md
 web/LIVE_TEST_RESULT.md
@@ -69,9 +70,10 @@ https://armpitpete.github.io/nd-romance/scene.html
 - Structure Spine form improved with missing fields and clearer navigation.
 - Static Arc Map form added.
 - Static Scene Card form added.
+- First scene draft generator plan added.
 - GitHub Pages workflow added.
 - GitHub Pages live test passed.
-- Issues #1 to #29 closed.
+- Issues #1 to #30 closed.
 
 ---
 
@@ -87,6 +89,7 @@ https://armpitpete.github.io/nd-romance/scene.html
 - `VERSION_LABEL_AUDIT.md`
 - `WEB_INTERFACE_PROTOTYPE_PLAN.md`
 - `WEB_APP_PRODUCT_GOAL.md`
+- `FIRST_SCENE_DRAFT_GENERATOR_PLAN.md`
 
 ### Web prototype
 
@@ -124,14 +127,15 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Test `https://armpitpete.github.io/nd-romance/scene.html` after deployment updates.
-2. Add clearer links between all web forms if needed.
-3. Then plan the first scene draft generator.
+1. Build `web/draft.html` as a static Scene Draft Prompt form.
+2. Use Scene Card fields as the input.
+3. Generate a copyable drafting prompt only.
+4. Do not add API calls yet.
 
 ---
 
 ## Current recommendation
 
 ```text
-Test the Scene Card form before adding draft generation.
+Build static Scene Draft Prompt form.
 ```
