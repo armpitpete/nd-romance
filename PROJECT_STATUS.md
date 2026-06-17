@@ -69,9 +69,10 @@ https://armpitpete.github.io/nd-romance/structure.html
 - Web app product goal added.
 - Static Mini Design Sheet form added.
 - Static Structure Spine form added.
+- Structure Spine form improved with missing fields and clearer navigation.
 - GitHub Pages workflow added.
 - GitHub Pages live test passed.
-- Issues #1 to #26 closed.
+- Issues #1 to #27 closed.
 
 ---
 
@@ -122,7 +123,7 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Test `https://armpitpete.github.io/nd-romance/structure.html`.
+1. Test `https://armpitpete.github.io/nd-romance/structure.html` after deployment updates.
 2. Add a clear link from the Mini Design page to the Structure Spine page if needed.
 3. Then build the Arc Map form.
 
@@ -131,5 +132,5 @@ VERSION_LABEL_AUDIT.md
 ## Current recommendation
 
 ```text
-Test the Structure Spine form before adding the Arc Map form.
+Test the improved Structure Spine form before adding the Arc Map form.
 ```
