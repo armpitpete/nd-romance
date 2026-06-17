@@ -54,7 +54,8 @@ The Mini Design Sheet is the default first file. The full Design Sheet is a deep
 - Clean blank templates folder added.
 - Quiet Hours Structure Template example added.
 - Quiet Hours Arc Map example added.
-- Issues #1 to #12 closed.
+- Quiet Hours Chapter 1 Scene Card added.
+- Issues #1 to #13 closed.
 
 ---
 
@@ -97,6 +98,7 @@ The Mini Design Sheet is the default first file. The full Design Sheet is a deep
 - `sample_projects/quiet_hours/Quiet_Hours_Mini_Design_Test_v1.1.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Structure_Template_Example.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Arc_Map_Example.md`
+- `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_Scene_Card_The_Broken_Lamp.md`
 
 ---
 
@@ -120,7 +122,7 @@ Use FIRST_USE.md and templates/ first. Do not start with checklist, triage, or r
 
 ## Next useful work
 
-1. Fill one Scene Card for Quiet Hours Chapter 1: The Broken Lamp.
+1. Draft a short prose version of Quiet Hours Chapter 1: The Broken Lamp.
 2. Add a short `HOW_TO_USE_WITH_GITHUB.md` note.
 3. Add a changelog.
 4. Review file naming later, because some files now say v1.0 while their content has been updated to v1.1.
@@ -134,5 +136,5 @@ Do not add more theory yet.
 The next best practical step is:
 
 ```text
-Fill one Scene Card for Quiet Hours Chapter 1: The Broken Lamp.
+Draft a short prose version of Quiet Hours Chapter 1: The Broken Lamp.
 ```
