@@ -57,7 +57,8 @@ The Mini Design Sheet is the default first file. The full Design Sheet is a deep
 - Quiet Hours Chapter 1 Scene Card added.
 - Quiet Hours Chapter 1 prose draft added.
 - Quiet Hours Chapter 1 draft review added.
-- Issues #1 to #15 closed.
+- Quiet Hours Chapter 1 prose draft v0.2 added.
+- Issues #1 to #16 closed.
 
 ---
 
@@ -103,6 +104,7 @@ The Mini Design Sheet is the default first file. The full Design Sheet is a deep
 - `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_Scene_Card_The_Broken_Lamp.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_Draft_Review.md`
+- `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft_v0.2.md`
 
 ---
 
@@ -126,10 +128,9 @@ Use FIRST_USE.md and templates/ first. Do not start with checklist, triage, or r
 
 ## Next useful work
 
-1. Create `Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft_v0.2.md` with the light revision applied.
-2. Add a short `HOW_TO_USE_WITH_GITHUB.md` note.
-3. Add a changelog.
-4. Review file naming later, because some files now say v1.0 while their content has been updated to v1.1.
+1. Add a short `HOW_TO_USE_WITH_GITHUB.md` note.
+2. Add a changelog.
+3. Review file naming later, because some files now say v1.0 while their content has been updated to v1.1.
 
 ---
 
@@ -140,5 +141,5 @@ Do not add more theory yet.
 The next best practical step is:
 
 ```text
-Create Quiet Hours Chapter 1 Draft v0.2 with the light revision applied.
+Add HOW_TO_USE_WITH_GITHUB.md.
 ```
