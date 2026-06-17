@@ -17,6 +17,7 @@ PROJECT_STATUS.md
 FIRST_USE.md
 HOW_TO_USE_WITH_GITHUB.md
 CHANGELOG.md
+VERSION_LABEL_AUDIT.md
 ```
 
 Then use blank forms from:
@@ -47,7 +48,8 @@ active_pack/
 - Chapter 1 draft v0.2 added.
 - GitHub use guide added.
 - Changelog added.
-- Issues #1 to #18 closed.
+- Version label audit added.
+- Issues #1 to #19 closed.
 
 ---
 
@@ -60,6 +62,7 @@ active_pack/
 - `FIRST_USE.md`
 - `HOW_TO_USE_WITH_GITHUB.md`
 - `CHANGELOG.md`
+- `VERSION_LABEL_AUDIT.md`
 
 ### Blank templates
 
@@ -94,14 +97,27 @@ then active_pack/ only when guidance is needed
 
 ---
 
+## Known follow-up
+
+Some active-pack filenames still say `v1.0` while the internal heading says `v1.1`.
+
+This is documented in:
+
+```text
+VERSION_LABEL_AUDIT.md
+```
+
+---
+
 ## Next useful work
 
-1. Review file naming later, because some files now say v1.0 while their content has been updated.
+1. Create a future issue to normalize active-pack versioned filenames, if needed.
+2. Otherwise, use the pack on a real romance project.
 
 ---
 
 ## Current recommendation
 
 ```text
-Review file naming and version labels later.
+Do not rename files until a dedicated reference-update pass is created.
 ```
