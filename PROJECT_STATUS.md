@@ -52,6 +52,7 @@ https://armpitpete.github.io/nd-romance/
 https://armpitpete.github.io/nd-romance/structure.html
 https://armpitpete.github.io/nd-romance/arc.html
 https://armpitpete.github.io/nd-romance/scene.html
+https://armpitpete.github.io/nd-romance/draft.html
 ```
 
 ---
@@ -71,9 +72,10 @@ https://armpitpete.github.io/nd-romance/scene.html
 - Static Arc Map form added.
 - Static Scene Card form added.
 - First scene draft generator plan added.
+- Static Scene Draft Prompt form added.
 - GitHub Pages workflow added.
 - GitHub Pages live test passed.
-- Issues #1 to #30 closed.
+- Issues #1 to #31 closed.
 
 ---
 
@@ -98,6 +100,7 @@ https://armpitpete.github.io/nd-romance/scene.html
 - `web/structure.html`
 - `web/arc.html`
 - `web/scene.html`
+- `web/draft.html`
 - `web/BROWSER_TEST_CHECKLIST.md`
 - `web/LIVE_TEST_RESULT.md`
 - `.github/workflows/pages.yml`
@@ -127,15 +130,14 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Build `web/draft.html` as a static Scene Draft Prompt form.
-2. Use Scene Card fields as the input.
-3. Generate a copyable drafting prompt only.
-4. Do not add API calls yet.
+1. Test `https://armpitpete.github.io/nd-romance/draft.html` after deployment updates.
+2. Add clearer links between all web forms if needed.
+3. Then improve the draft prompt output using a real filled Scene Card.
 
 ---
 
 ## Current recommendation
 
 ```text
-Build static Scene Draft Prompt form.
+Test the Scene Draft Prompt form.
 ```
