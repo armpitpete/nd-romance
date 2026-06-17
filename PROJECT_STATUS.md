@@ -20,6 +20,7 @@ CHANGELOG.md
 VERSION_LABEL_AUDIT.md
 WEB_INTERFACE_PROTOTYPE_PLAN.md
 web/README.md
+web/BROWSER_TEST_CHECKLIST.md
 ```
 
 Then use blank forms from:
@@ -59,7 +60,8 @@ web/index.html
 - Version label audit added.
 - Web interface prototype plan added.
 - Static Mini Design Sheet form added.
-- Issues #1 to #21 closed.
+- Browser test checklist added.
+- Issues #1 to #22 closed.
 
 ---
 
@@ -79,6 +81,7 @@ web/index.html
 
 - `web/README.md`
 - `web/index.html`
+- `web/BROWSER_TEST_CHECKLIST.md`
 
 ### Blank templates
 
@@ -127,8 +130,8 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Test `web/index.html` in a browser.
-2. Add GitHub Pages setup notes.
+1. Test `web/index.html` using `web/BROWSER_TEST_CHECKLIST.md`.
+2. Add GitHub Pages setup notes after the test passes.
 3. Add a Structure Spine form after the Mini Design form is tested.
 
 ---
@@ -136,5 +139,5 @@ VERSION_LABEL_AUDIT.md
 ## Current recommendation
 
 ```text
-Test web/index.html in a browser before adding more screens.
+Test web/index.html using web/BROWSER_TEST_CHECKLIST.md before adding more screens.
 ```
