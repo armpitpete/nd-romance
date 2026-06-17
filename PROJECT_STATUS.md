@@ -73,9 +73,10 @@ https://armpitpete.github.io/nd-romance/draft.html
 - Static Scene Card form added.
 - First scene draft generator plan added.
 - Static Scene Draft Prompt form added.
+- Quiet Hours Scene Draft Prompt test added.
 - GitHub Pages workflow added.
 - GitHub Pages live test passed.
-- Issues #1 to #31 closed.
+- Issues #1 to #32 closed.
 
 ---
 
@@ -105,6 +106,10 @@ https://armpitpete.github.io/nd-romance/draft.html
 - `web/LIVE_TEST_RESULT.md`
 - `.github/workflows/pages.yml`
 
+### Sample tests
+
+- `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_Scene_Draft_Prompt_Test.md`
+
 ### Blank templates
 
 - `templates/README.md`
@@ -130,14 +135,15 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Test `https://armpitpete.github.io/nd-romance/draft.html` after deployment updates.
-2. Add clearer links between all web forms if needed.
-3. Then improve the draft prompt output using a real filled Scene Card.
+1. Add a hidden-information field to `web/draft.html`.
+2. Include it in the generated prompt.
+3. Keep the page static.
+4. Do not add API calls yet.
 
 ---
 
 ## Current recommendation
 
 ```text
-Test the Scene Draft Prompt form.
+Add hidden-information field to Scene Draft Prompt form.
 ```
