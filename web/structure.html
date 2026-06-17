@@ -32,6 +32,7 @@ body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;
 <label>Repair path <textarea id="repair"></textarea></label>
 <label>Ending proof <textarea id="proof"></textarea></label>
 <label>Chapter spine <textarea id="chapters" placeholder="1 | job | event | change"></textarea></label>
+<button id="loadMini" type="button">Load from Mini Design</button>
 <button id="copy" type="button">Copy Markdown</button>
 <button id="download" type="button">Download .md</button>
 <button id="clear" type="button">Clear</button>
@@ -45,11 +46,14 @@ body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;
 <script>
 const ids=['title','pair','length','promise','obstacle','pressure','truth','ending','opening','bond','midpoint','fault','test','repair','proof','chapters'];
 const key='ndrb-structure-v2';
+const miniDesignKey='nd-romance-builder-mini-design-v1';
 const el=id=>document.getElementById(id);
 const v=id=>el(id).value.trim();
 function md(){return `# ${v('title')||'Untitled'} - Structure Spine\n\n## Project\n\n**Primary pair:** ${v('pair')}\n\n**Estimated length:** ${v('length')}\n\n## Carry-over\n\n**Emotional promise:**\n${v('promise')}\n\n**Main obstacle:**\n${v('obstacle')}\n\n**External pressure:**\n${v('pressure')}\n\n**ND-readable truth:**\n${v('truth')}\n\n**Ending requirement:**\n${v('ending')}\n\n## Story path\n\n**Opening contact:**\n${v('opening')}\n\n**Deepening bond:**\n${v('bond')}\n\n**Midpoint change:**\n${v('midpoint')}\n\n**Pressure / fault line:**\n${v('fault')}\n\n**Major test:**\n${v('test')}\n\n**Repair path:**\n${v('repair')}\n\n**Ending proof:**\n${v('proof')}\n\n## Chapter spine\n\n${v('chapters')}\n\n## Next step\n\nUse this to build the Arc Map.\n`;}
 function save(){const d={};ids.forEach(id=>d[id]=el(id).value);localStorage.setItem(key,JSON.stringify(d));el('preview').textContent=md();}
 function load(){const d=JSON.parse(localStorage.getItem(key)||'{}');ids.forEach(id=>{if(d[id])el(id).value=d[id];});save();}
+function loadMiniDesign(){const raw=localStorage.getItem(miniDesignKey);if(!raw){el('status').textContent='No saved Mini Design found.';return;}let d;try{d=JSON.parse(raw);}catch(e){el('status').textContent='Saved Mini Design could not be read.';return;}el('title').value=d.workingTitle||'';el('pair').value=`${d.personAName||''} / ${d.personBName||''}`;el('promise').value=d.emotionalPromise||'';el('obstacle').value=d.mainObstacle||'';el('pressure').value=d.externalPressure||'';el('truth').value=d.ndTruth||'';el('ending').value=d.endingRequirement||'';save();el('status').textContent='Loaded from Mini Design.';}
+el('loadMini').onclick=loadMiniDesign;
 el('copy').onclick=async()=>{await navigator.clipboard.writeText(md());el('status').textContent='Copied.';};
 el('download').onclick=()=>{const b=new Blob([md()],{type:'text/markdown'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='structure_spine.md';a.click();};
 el('clear').onclick=()=>{ids.forEach(id=>el(id).value='');localStorage.removeItem(key);save();};
