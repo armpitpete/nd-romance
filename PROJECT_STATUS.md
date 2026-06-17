@@ -52,7 +52,8 @@ The Mini Design Sheet is the default first file. The full Design Sheet is a deep
 - Quiet Hours v1.1 mini test added.
 - Project status note added.
 - Clean blank templates folder added.
-- Issues #1 to #10 closed.
+- Quiet Hours Structure Template example added.
+- Issues #1 to #11 closed.
 
 ---
 
@@ -93,6 +94,7 @@ The Mini Design Sheet is the default first file. The full Design Sheet is a deep
 - `sample_projects/quiet_hours/Quiet_Hours_First_Use_Test.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Mini_Design_Test.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Mini_Design_Test_v1.1.md`
+- `sample_projects/quiet_hours/Quiet_Hours_Structure_Template_Example.md`
 
 ---
 
@@ -116,7 +118,7 @@ Use FIRST_USE.md and templates/ first. Do not start with checklist, triage, or r
 
 ## Next useful work
 
-1. Create a filled example for the Structure Template using Quiet Hours.
+1. Create a filled Arc Map example for Quiet Hours.
 2. Add a short `HOW_TO_USE_WITH_GITHUB.md` note.
 3. Add a changelog.
 4. Review file naming later, because some files now say v1.0 while their content has been updated to v1.1.
@@ -130,5 +132,5 @@ Do not add more theory yet.
 The next best practical step is:
 
 ```text
-Create a filled Structure Template example for Quiet Hours.
+Create a filled Arc Map example for Quiet Hours.
 ```
