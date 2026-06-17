@@ -11,12 +11,14 @@ PROJECT_STATUS.md
 FIRST_USE.md
 HOW_TO_USE_WITH_GITHUB.md
 CHANGELOG.md
+VERSION_LABEL_AUDIT.md
 ```
 
 `PROJECT_STATUS.md` shows the current state and next steps.
 `FIRST_USE.md` gives the shortest path through the pack.
 `HOW_TO_USE_WITH_GITHUB.md` explains the repo workflow.
 `CHANGELOG.md` records the main checkpoints.
+`VERSION_LABEL_AUDIT.md` records the known version-label mismatch.
 
 ## Working source
 
@@ -84,6 +86,7 @@ sample_projects/quiet_hours/Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft_v0.2.md
 - clean templates folder added
 - GitHub use guide added
 - changelog added
+- version label audit added
 
 ## Storage rule
 
