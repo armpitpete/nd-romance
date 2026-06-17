@@ -25,7 +25,7 @@ Good enough means:
 Do not start with the checklist, triage sheet, or revision workflow.
 Those are for checking and repair.
 
-## First 20-minute workflow
+## First workflow
 
 ### Step 1 — Design Sheet
 
