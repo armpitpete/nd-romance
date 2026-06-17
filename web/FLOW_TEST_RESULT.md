@@ -26,7 +26,7 @@ Scene Draft Prompt
 
 ## Navigation cleanup
 
-A `Flow` link has now been added to the form pages:
+A `Flow` link has now been added to all form pages:
 
 ```text
 web/index.html
@@ -35,6 +35,10 @@ web/arc.html
 web/scene.html
 web/draft.html
 ```
+
+## Status
+
+Issue #35 completed.
 
 ## Next useful task
 
