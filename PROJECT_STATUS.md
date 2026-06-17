@@ -50,6 +50,7 @@ Use the live web forms from:
 https://armpitpete.github.io/nd-romance/
 https://armpitpete.github.io/nd-romance/structure.html
 https://armpitpete.github.io/nd-romance/arc.html
+https://armpitpete.github.io/nd-romance/scene.html
 ```
 
 ---
@@ -67,9 +68,10 @@ https://armpitpete.github.io/nd-romance/arc.html
 - Static Structure Spine form added.
 - Structure Spine form improved with missing fields and clearer navigation.
 - Static Arc Map form added.
+- Static Scene Card form added.
 - GitHub Pages workflow added.
 - GitHub Pages live test passed.
-- Issues #1 to #28 closed.
+- Issues #1 to #29 closed.
 
 ---
 
@@ -92,6 +94,7 @@ https://armpitpete.github.io/nd-romance/arc.html
 - `web/index.html`
 - `web/structure.html`
 - `web/arc.html`
+- `web/scene.html`
 - `web/BROWSER_TEST_CHECKLIST.md`
 - `web/LIVE_TEST_RESULT.md`
 - `.github/workflows/pages.yml`
@@ -121,14 +124,14 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Test `https://armpitpete.github.io/nd-romance/arc.html` after deployment updates.
-2. Add a clear link from the Mini Design page to the Structure Spine page if needed.
-3. Then build the Scene Card form.
+1. Test `https://armpitpete.github.io/nd-romance/scene.html` after deployment updates.
+2. Add clearer links between all web forms if needed.
+3. Then plan the first scene draft generator.
 
 ---
 
 ## Current recommendation
 
 ```text
-Test the Arc Map form before adding the Scene Card form.
+Test the Scene Card form before adding draft generation.
 ```
