@@ -8,6 +8,25 @@ The pack supports romance stories that are emotionally clear, ND-readable, struc
 
 ---
 
+## Web app goal
+
+The web app is a guided builder.
+
+A user fills in forms, receives structured Markdown outputs, and later uses those outputs to draft the project.
+
+Build order:
+
+```text
+forms
+planning outputs
+scene draft support
+larger draft support later
+```
+
+Current rule: finish the form flow before adding advanced generation features.
+
+---
+
 ## Start path
 
 Open first:
@@ -19,21 +38,10 @@ HOW_TO_USE_WITH_GITHUB.md
 CHANGELOG.md
 VERSION_LABEL_AUDIT.md
 WEB_INTERFACE_PROTOTYPE_PLAN.md
+WEB_APP_PRODUCT_GOAL.md
 web/README.md
 web/BROWSER_TEST_CHECKLIST.md
 web/LIVE_TEST_RESULT.md
-```
-
-Then use blank forms from:
-
-```text
-templates/
-```
-
-Use fuller guidance from:
-
-```text
-active_pack/
 ```
 
 Use the live web prototype from:
@@ -48,23 +56,15 @@ https://armpitpete.github.io/nd-romance/
 
 - GitHub repo created.
 - Active pack imported into `active_pack/`.
-- README created and updated.
 - First-use workflow added.
-- Scene-card overlap simplified.
-- Mini Design Sheet added and tested.
-- External-pressure prompt added.
 - Clean blank templates folder added.
 - Quiet Hours examples added.
-- Chapter 1 draft v0.2 added.
-- GitHub use guide added.
-- Changelog added.
-- Version label audit added.
 - Web interface prototype plan added.
+- Web app product goal added.
 - Static Mini Design Sheet form added.
-- Browser test checklist added.
 - GitHub Pages workflow added.
 - GitHub Pages live test passed.
-- Issues #1 to #24 closed.
+- Issues #1 to #25 closed.
 
 ---
 
@@ -79,6 +79,7 @@ https://armpitpete.github.io/nd-romance/
 - `CHANGELOG.md`
 - `VERSION_LABEL_AUDIT.md`
 - `WEB_INTERFACE_PROTOTYPE_PLAN.md`
+- `WEB_APP_PRODUCT_GOAL.md`
 
 ### Web prototype
 
@@ -96,28 +97,6 @@ https://armpitpete.github.io/nd-romance/
 - `templates/arc_map_blank.md`
 - `templates/scene_card_blank.md`
 - `templates/beat_tracker_blank.md`
-
-### Sample files
-
-- `sample_projects/quiet_hours/Quiet_Hours_Mini_Design_Test_v1.1.md`
-- `sample_projects/quiet_hours/Quiet_Hours_Structure_Template_Example.md`
-- `sample_projects/quiet_hours/Quiet_Hours_Arc_Map_Example.md`
-- `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_Scene_Card_The_Broken_Lamp.md`
-- `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft_v0.2.md`
-
----
-
-## Main risk
-
-The pack has many guidance files, so a new user may open too much at once.
-
-Use this order instead:
-
-```text
-FIRST_USE.md
-then templates/
-then active_pack/ only when guidance is needed
-```
 
 ---
 
@@ -137,7 +116,7 @@ VERSION_LABEL_AUDIT.md
 
 1. Build a static Structure Spine form.
 2. Keep the Mini Design form as the stable first screen.
-3. Do not add accounts, database, or AI features yet.
+3. Do not add accounts, database, or advanced features yet.
 
 ---
 
