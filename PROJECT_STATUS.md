@@ -50,6 +50,12 @@ Use the live web prototype from:
 https://armpitpete.github.io/nd-romance/
 ```
 
+Use the Structure Spine form from:
+
+```text
+https://armpitpete.github.io/nd-romance/structure.html
+```
+
 ---
 
 ## Done
@@ -62,9 +68,10 @@ https://armpitpete.github.io/nd-romance/
 - Web interface prototype plan added.
 - Web app product goal added.
 - Static Mini Design Sheet form added.
+- Static Structure Spine form added.
 - GitHub Pages workflow added.
 - GitHub Pages live test passed.
-- Issues #1 to #25 closed.
+- Issues #1 to #26 closed.
 
 ---
 
@@ -85,6 +92,7 @@ https://armpitpete.github.io/nd-romance/
 
 - `web/README.md`
 - `web/index.html`
+- `web/structure.html`
 - `web/BROWSER_TEST_CHECKLIST.md`
 - `web/LIVE_TEST_RESULT.md`
 - `.github/workflows/pages.yml`
@@ -114,14 +122,14 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Build a static Structure Spine form.
-2. Keep the Mini Design form as the stable first screen.
-3. Do not add accounts, database, or advanced features yet.
+1. Test `https://armpitpete.github.io/nd-romance/structure.html`.
+2. Add a clear link from the Mini Design page to the Structure Spine page if needed.
+3. Then build the Arc Map form.
 
 ---
 
 ## Current recommendation
 
 ```text
-Build static Structure Spine form.
+Test the Structure Spine form before adding the Arc Map form.
 ```
