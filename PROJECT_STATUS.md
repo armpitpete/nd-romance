@@ -56,7 +56,8 @@ The Mini Design Sheet is the default first file. The full Design Sheet is a deep
 - Quiet Hours Arc Map example added.
 - Quiet Hours Chapter 1 Scene Card added.
 - Quiet Hours Chapter 1 prose draft added.
-- Issues #1 to #14 closed.
+- Quiet Hours Chapter 1 draft review added.
+- Issues #1 to #15 closed.
 
 ---
 
@@ -101,6 +102,7 @@ The Mini Design Sheet is the default first file. The full Design Sheet is a deep
 - `sample_projects/quiet_hours/Quiet_Hours_Arc_Map_Example.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_Scene_Card_The_Broken_Lamp.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft.md`
+- `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_Draft_Review.md`
 
 ---
 
@@ -124,7 +126,7 @@ Use FIRST_USE.md and templates/ first. Do not start with checklist, triage, or r
 
 ## Next useful work
 
-1. Review the Chapter 1 prose draft against the scene card.
+1. Create `Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft_v0.2.md` with the light revision applied.
 2. Add a short `HOW_TO_USE_WITH_GITHUB.md` note.
 3. Add a changelog.
 4. Review file naming later, because some files now say v1.0 while their content has been updated to v1.1.
@@ -138,5 +140,5 @@ Do not add more theory yet.
 The next best practical step is:
 
 ```text
-Review the Chapter 1 prose draft against the scene card.
+Create Quiet Hours Chapter 1 Draft v0.2 with the light revision applied.
 ```
