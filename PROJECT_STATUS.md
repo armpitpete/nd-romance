@@ -21,6 +21,7 @@ VERSION_LABEL_AUDIT.md
 WEB_INTERFACE_PROTOTYPE_PLAN.md
 web/README.md
 web/BROWSER_TEST_CHECKLIST.md
+web/LIVE_TEST_RESULT.md
 ```
 
 Then use blank forms from:
@@ -35,7 +36,7 @@ Use fuller guidance from:
 active_pack/
 ```
 
-Use the first web prototype from:
+Use the live web prototype from:
 
 ```text
 https://armpitpete.github.io/nd-romance/
@@ -62,7 +63,8 @@ https://armpitpete.github.io/nd-romance/
 - Static Mini Design Sheet form added.
 - Browser test checklist added.
 - GitHub Pages workflow added.
-- Issues #1 to #23 closed.
+- GitHub Pages live test passed.
+- Issues #1 to #24 closed.
 
 ---
 
@@ -83,6 +85,7 @@ https://armpitpete.github.io/nd-romance/
 - `web/README.md`
 - `web/index.html`
 - `web/BROWSER_TEST_CHECKLIST.md`
+- `web/LIVE_TEST_RESULT.md`
 - `.github/workflows/pages.yml`
 
 ### Blank templates
@@ -132,15 +135,14 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Wait for GitHub Actions Pages deployment to finish.
-2. Open `https://armpitpete.github.io/nd-romance/`.
-3. Test the live page using `web/BROWSER_TEST_CHECKLIST.md`.
-4. Add a Structure Spine form after the Mini Design form is tested.
+1. Build a static Structure Spine form.
+2. Keep the Mini Design form as the stable first screen.
+3. Do not add accounts, database, or AI features yet.
 
 ---
 
 ## Current recommendation
 
 ```text
-Wait for Pages deployment, then test https://armpitpete.github.io/nd-romance/.
+Build static Structure Spine form.
 ```
