@@ -19,6 +19,7 @@ HOW_TO_USE_WITH_GITHUB.md
 CHANGELOG.md
 VERSION_LABEL_AUDIT.md
 WEB_INTERFACE_PROTOTYPE_PLAN.md
+web/README.md
 ```
 
 Then use blank forms from:
@@ -31,6 +32,12 @@ Use fuller guidance from:
 
 ```text
 active_pack/
+```
+
+Use the first web prototype from:
+
+```text
+web/index.html
 ```
 
 ---
@@ -51,7 +58,8 @@ active_pack/
 - Changelog added.
 - Version label audit added.
 - Web interface prototype plan added.
-- Issues #1 to #20 closed.
+- Static Mini Design Sheet form added.
+- Issues #1 to #21 closed.
 
 ---
 
@@ -66,6 +74,11 @@ active_pack/
 - `CHANGELOG.md`
 - `VERSION_LABEL_AUDIT.md`
 - `WEB_INTERFACE_PROTOTYPE_PLAN.md`
+
+### Web prototype
+
+- `web/README.md`
+- `web/index.html`
 
 ### Blank templates
 
@@ -114,14 +127,14 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Build a static Mini Design Sheet form.
-2. Create a future issue to normalize active-pack versioned filenames, if needed.
-3. Otherwise, use the pack on a real romance project.
+1. Test `web/index.html` in a browser.
+2. Add GitHub Pages setup notes.
+3. Add a Structure Spine form after the Mini Design form is tested.
 
 ---
 
 ## Current recommendation
 
 ```text
-Build static Mini Design Sheet form.
+Test web/index.html in a browser before adding more screens.
 ```
