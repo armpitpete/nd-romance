@@ -22,22 +22,23 @@ active_pack/
 
 ## First-use order
 
-1. Design Sheet
+1. Mini Design Sheet
 2. Structure Template
 3. Arc Map
 4. Scene Card Template
 
 ## Full working order
 
-1. Design Sheet
-2. Structure Template
-3. Arc Map
-4. Scene Card Template
-5. Scene Card Guidance
-6. Beat Tracker
-7. Checklist
-8. Draft Failure Triage
-9. Revision Workflow
+1. Mini Design Sheet
+2. Full Design Sheet
+3. Structure Template
+4. Arc Map
+5. Scene Card Template
+6. Scene Card Guidance
+7. Beat Tracker
+8. Checklist
+9. Draft Failure Triage
+10. Revision Workflow
 
 ## Sample project
 
@@ -55,16 +56,7 @@ Use it to see how the pack works on a simple romance idea.
 - scene-card overlap simplified
 - first-use workflow added
 - sample first-use test added
-
-## Current finding
-
-The first-use workflow works, but the full Design Sheet is still heavy for a first session.
-
-Next useful improvement:
-
-```text
-Add a one-page mini design sheet.
-```
+- one-page mini design sheet added
 
 ## Storage rule
 
