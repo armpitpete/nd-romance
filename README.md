@@ -9,10 +9,12 @@ Open these first:
 ```text
 PROJECT_STATUS.md
 FIRST_USE.md
+HOW_TO_USE_WITH_GITHUB.md
 ```
 
 `PROJECT_STATUS.md` shows the current state and next steps.
 `FIRST_USE.md` gives the shortest path through the pack.
+`HOW_TO_USE_WITH_GITHUB.md` explains how to use the repo without mixing templates, samples, and source files.
 
 ## Working source
 
@@ -66,10 +68,10 @@ Sample test files are available here:
 sample_projects/quiet_hours/
 ```
 
-The newest sample is:
+The newest sample draft is:
 
 ```text
-sample_projects/quiet_hours/Quiet_Hours_Mini_Design_Test_v1.1.md
+sample_projects/quiet_hours/Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft_v0.2.md
 ```
 
 ## Current status
@@ -82,6 +84,7 @@ sample_projects/quiet_hours/Quiet_Hours_Mini_Design_Test_v1.1.md
 - external-pressure prompt added
 - project status note added
 - clean templates folder added
+- GitHub use guide added
 
 ## Storage rule
 
