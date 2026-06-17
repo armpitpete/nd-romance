@@ -1,25 +1,49 @@
 # ND Romance
 
-A working GitHub copy of the romance planning and revision pack.
+A working GitHub copy of the ND-readable romance planning and revision pack.
+
+## Start here
+
+Open this first:
+
+```text
+FIRST_USE.md
+```
+
+That file gives the shortest path through the pack.
 
 ## Working source
 
-Use `active_pack/` as the active working area.
+Use this folder as the active working area:
 
-## Working order
+```text
+active_pack/
+```
+
+## First-use order
 
 1. Design Sheet
 2. Structure Template
 3. Arc Map
-4. Scene Card
-5. Beat Tracker
-6. Checklist
-7. Draft Failure Triage
-8. Revision Workflow
+4. Scene Card Template
 
-## Current cleanup note
+## Full working order
 
-The two scene-card files overlap. Next cleanup should decide whether one is the blank template and one is the working copy, or merge them into one clearer file.
+1. Design Sheet
+2. Structure Template
+3. Arc Map
+4. Scene Card Template
+5. Scene Card Guidance
+6. Beat Tracker
+7. Checklist
+8. Draft Failure Triage
+9. Revision Workflow
+
+## Current status
+
+- active pack imported
+- scene-card overlap simplified
+- first-use workflow added
 
 ## Storage rule
 
