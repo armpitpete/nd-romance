@@ -24,8 +24,22 @@ Scene Card
 Scene Draft Prompt
 ```
 
+## Navigation cleanup
+
+A `Flow` link has now been added to the form pages:
+
+```text
+web/index.html
+web/structure.html
+web/arc.html
+web/scene.html
+web/draft.html
+```
+
 ## Next useful task
 
-Create a shared navigation cleanup so each form page can link clearly to the full flow.
+Test each page and confirm the `Flow` link returns to:
 
-Do not change form logic yet.
+```text
+https://armpitpete.github.io/nd-romance/flow.html
+```
