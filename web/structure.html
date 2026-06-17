@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ND Romance Builder - Structure Spine</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;line-height:1.5}header,main{max-width:1100px;margin:auto;padding:1rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}@media(max-width:800px){.grid{grid-template-columns:1fr}}section,aside{background:white;border:1px solid #d8d2c8;border-radius:16px;padding:1rem}label{display:block;font-weight:700;margin-top:.8rem}input,textarea{width:100%;font:inherit;padding:.7rem;border:1px solid #d8d2c8;border-radius:10px}textarea{min-height:80px}button{margin:.5rem .3rem .5rem 0;padding:.7rem 1rem;border:0;border-radius:999px;font-weight:700;background:#6b4fa3;color:white}pre{white-space:pre-wrap;background:#20262c;color:white;padding:1rem;border-radius:12px}a{color:#4a3477}
+</style>
+</head>
+<body>
+<header>
+<h1>Structure Spine</h1>
+<p>Second form in the builder. Use this after the Mini Design form.</p>
+<p><a href="./">Mini Design</a></p>
+</header>
+<main class="grid">
+<section>
+<label>Working title <input id="title"></label>
+<label>Primary pair <input id="pair"></label>
+<label>Emotional promise <textarea id="promise"></textarea></label>
+<label>Main obstacle <textarea id="obstacle"></textarea></label>
+<label>External pressure <textarea id="pressure"></textarea></label>
+<label>Opening contact <textarea id="opening"></textarea></label>
+<label>Deepening bond <textarea id="bond"></textarea></label>
+<label>Major test <textarea id="test"></textarea></label>
+<label>Repair path <textarea id="repair"></textarea></label>
+<label>Ending proof <textarea id="proof"></textarea></label>
+<label>Chapter spine <textarea id="chapters" placeholder="1 | job | event | change"></textarea></label>
+<button id="copy" type="button">Copy Markdown</button>
+<button id="download" type="button">Download .md</button>
+<button id="clear" type="button">Clear</button>
+<p id="status">Autosaves in this browser.</p>
+</section>
+<aside>
+<h2>Markdown preview</h2>
+<pre id="preview"></pre>
+</aside>
+</main>
+<script>
+const ids=['title','pair','promise','obstacle','pressure','opening','bond','test','repair','proof','chapters'];
+const key='ndrb-structure-v1';
+const el=id=>document.getElementById(id);
+const v=id=>el(id).value.trim();
+function md(){return `# ${v('title')||'Untitled'} - Structure Spine\n\n## Project\n\n**Primary pair:** ${v('pair')}\n\n## Core\n\n**Emotional promise:**\n${v('promise')}\n\n**Main obstacle:**\n${v('obstacle')}\n\n**External pressure:**\n${v('pressure')}\n\n## Story path\n\n**Opening contact:**\n${v('opening')}\n\n**Deepening bond:**\n${v('bond')}\n\n**Major test:**\n${v('test')}\n\n**Repair path:**\n${v('repair')}\n\n**Ending proof:**\n${v('proof')}\n\n## Chapter spine\n\n${v('chapters')}\n`;}
+function save(){const d={};ids.forEach(id=>d[id]=el(id).value);localStorage.setItem(key,JSON.stringify(d));el('preview').textContent=md();}
+function load(){const d=JSON.parse(localStorage.getItem(key)||'{}');ids.forEach(id=>{if(d[id])el(id).value=d[id];});save();}
+el('copy').onclick=async()=>{await navigator.clipboard.writeText(md());el('status').textContent='Copied.';};
+el('download').onclick=()=>{const b=new Blob([md()],{type:'text/markdown'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='structure_spine.md';a.click();};
+el('clear').onclick=()=>{ids.forEach(id=>el(id).value='');localStorage.removeItem(key);save();};
+ids.forEach(id=>el(id).addEventListener('input',save));load();
+</script>
+</body>
+</html>
