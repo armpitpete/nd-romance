@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ND Romance Builder - Arc Map</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;line-height:1.5}header,main{max-width:1100px;margin:auto;padding:1rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}@media(max-width:800px){.grid{grid-template-columns:1fr}}section,aside{background:white;border:1px solid #d8d2c8;border-radius:16px;padding:1rem}label{display:block;font-weight:700;margin-top:.8rem}input,textarea{width:100%;font:inherit;padding:.7rem;border:1px solid #d8d2c8;border-radius:10px}textarea{min-height:80px}button{margin:.5rem .3rem .5rem 0;padding:.7rem 1rem;border:0;border-radius:999px;font-weight:700;background:#6b4fa3;color:white}pre{white-space:pre-wrap;background:#20262c;color:white;padding:1rem;border-radius:12px}a{color:#4a3477}.nav a{display:inline-block;margin-right:.7rem}.next{font-weight:700}
+</style>
+</head>
+<body>
+<header>
+<h1>Arc Map</h1>
+<p>Third form in the builder. Use this after the Structure Spine form.</p>
+<p class="nav"><a href="./">Mini Design</a><a href="structure.html">Structure Spine</a><a class="next" href="scene.html">Scene Card later</a></p>
+</header>
+<main class="grid">
+<section>
+<label>Working title <input id="title"></label>
+<label>Primary pair <input id="pair"></label>
+<label>Starting state <textarea id="start"></textarea></label>
+<label>First change <textarea id="first"></textarea></label>
+<label>Pattern formation <textarea id="pattern"></textarea></label>
+<label>Trust opening <textarea id="trust"></textarea></label>
+<label>Pressure stage <textarea id="pressure"></textarea></label>
+<label>Major turn <textarea id="turn"></textarea></label>
+<label>Repair / recognition <textarea id="repair"></textarea></label>
+<label>Ending state <textarea id="ending"></textarea></label>
+<label>Chapter arc rows <textarea id="rows" placeholder="1 | stage | change | pressure or clarity | end state"></textarea></label>
+<button id="copy" type="button">Copy Markdown</button>
+<button id="download" type="button">Download .md</button>
+<button id="clear" type="button">Clear</button>
+<p id="status">Autosaves in this browser.</p>
+</section>
+<aside>
+<h2>Markdown preview</h2>
+<pre id="preview"></pre>
+</aside>
+</main>
+<script>
+const ids=['title','pair','start','first','pattern','trust','pressure','turn','repair','ending','rows'];
+const key='ndrb-arc-v1';
+const el=id=>document.getElementById(id);
+const v=id=>el(id).value.trim();
+function md(){return `# ${v('title')||'Untitled'} - Arc Map\n\n## Project\n\n**Primary pair:** ${v('pair')}\n\n## Relationship arc\n\n**Starting state:**\n${v('start')}\n\n**First change:**\n${v('first')}\n\n**Pattern formation:**\n${v('pattern')}\n\n**Trust opening:**\n${v('trust')}\n\n**Pressure stage:**\n${v('pressure')}\n\n**Major turn:**\n${v('turn')}\n\n**Repair / recognition:**\n${v('repair')}\n\n**Ending state:**\n${v('ending')}\n\n## Chapter arc grid\n\n${v('rows')}\n\n## Next step\n\nUse this to create the first Scene Card.\n`;}
+function save(){const d={};ids.forEach(id=>d[id]=el(id).value);localStorage.setItem(key,JSON.stringify(d));el('preview').textContent=md();}
+function load(){const d=JSON.parse(localStorage.getItem(key)||'{}');ids.forEach(id=>{if(d[id])el(id).value=d[id];});save();}
+el('copy').onclick=async()=>{await navigator.clipboard.writeText(md());el('status').textContent='Copied.';};
+el('download').onclick=()=>{const b=new Blob([md()],{type:'text/markdown'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='arc_map.md';a.click();};
+el('clear').onclick=()=>{ids.forEach(id=>el(id).value='');localStorage.removeItem(key);save();};
+ids.forEach(id=>el(id).addEventListener('input',save));load();
+</script>
+</body>
+</html>
