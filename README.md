@@ -4,13 +4,15 @@ A working GitHub copy of the ND-readable romance planning and revision pack.
 
 ## Start here
 
-Open this first:
+Open these first:
 
 ```text
+PROJECT_STATUS.md
 FIRST_USE.md
 ```
 
-That file gives the shortest path through the pack.
+`PROJECT_STATUS.md` shows the current state and next steps.
+`FIRST_USE.md` gives the shortest path through the pack.
 
 ## Working source
 
@@ -42,21 +44,27 @@ active_pack/
 
 ## Sample project
 
-A small first-use test project is available here:
+Sample test files are available here:
 
 ```text
-sample_projects/quiet_hours/Quiet_Hours_First_Use_Test.md
+sample_projects/quiet_hours/
 ```
 
-Use it to see how the pack works on a simple romance idea.
+The newest sample is:
+
+```text
+sample_projects/quiet_hours/Quiet_Hours_Mini_Design_Test_v1.1.md
+```
 
 ## Current status
 
 - active pack imported
 - scene-card overlap simplified
 - first-use workflow added
-- sample first-use test added
-- one-page mini design sheet added
+- sample project added
+- mini design sheet added and tested
+- external-pressure prompt added
+- project status note added
 
 ## Storage rule
 
