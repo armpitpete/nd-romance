@@ -13,6 +13,7 @@ HOW_TO_USE_WITH_GITHUB.md
 CHANGELOG.md
 VERSION_LABEL_AUDIT.md
 WEB_INTERFACE_PROTOTYPE_PLAN.md
+web/README.md
 ```
 
 `PROJECT_STATUS.md` shows the current state and next steps.
@@ -21,6 +22,17 @@ WEB_INTERFACE_PROTOTYPE_PLAN.md
 `CHANGELOG.md` records the main checkpoints.
 `VERSION_LABEL_AUDIT.md` records the known version-label mismatch.
 `WEB_INTERFACE_PROTOTYPE_PLAN.md` records the planned static web interface.
+`web/README.md` explains the first browser prototype.
+
+## Web prototype
+
+The first static interface is here:
+
+```text
+web/index.html
+```
+
+It includes the Mini Design Sheet form, live Markdown preview, copy button, download button, and browser localStorage autosave.
 
 ## Working source
 
@@ -90,6 +102,7 @@ sample_projects/quiet_hours/Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft_v0.2.md
 - changelog added
 - version label audit added
 - web interface prototype plan added
+- static Mini Design Sheet form added
 
 ## Storage rule
 
