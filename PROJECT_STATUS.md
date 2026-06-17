@@ -16,6 +16,7 @@ Open first:
 PROJECT_STATUS.md
 FIRST_USE.md
 HOW_TO_USE_WITH_GITHUB.md
+CHANGELOG.md
 ```
 
 Then use blank forms from:
@@ -45,7 +46,8 @@ active_pack/
 - Quiet Hours examples added.
 - Chapter 1 draft v0.2 added.
 - GitHub use guide added.
-- Issues #1 to #17 closed.
+- Changelog added.
+- Issues #1 to #18 closed.
 
 ---
 
@@ -57,6 +59,7 @@ active_pack/
 - `PROJECT_STATUS.md`
 - `FIRST_USE.md`
 - `HOW_TO_USE_WITH_GITHUB.md`
+- `CHANGELOG.md`
 
 ### Blank templates
 
@@ -93,13 +96,12 @@ then active_pack/ only when guidance is needed
 
 ## Next useful work
 
-1. Add `CHANGELOG.md`.
-2. Review file naming later, because some files now say v1.0 while their content has been updated.
+1. Review file naming later, because some files now say v1.0 while their content has been updated.
 
 ---
 
 ## Current recommendation
 
 ```text
-Add CHANGELOG.md.
+Review file naming and version labels later.
 ```
