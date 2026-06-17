@@ -44,16 +44,12 @@ web/BROWSER_TEST_CHECKLIST.md
 web/LIVE_TEST_RESULT.md
 ```
 
-Use the live web prototype from:
+Use the live web forms from:
 
 ```text
 https://armpitpete.github.io/nd-romance/
-```
-
-Use the Structure Spine form from:
-
-```text
 https://armpitpete.github.io/nd-romance/structure.html
+https://armpitpete.github.io/nd-romance/arc.html
 ```
 
 ---
@@ -70,9 +66,10 @@ https://armpitpete.github.io/nd-romance/structure.html
 - Static Mini Design Sheet form added.
 - Static Structure Spine form added.
 - Structure Spine form improved with missing fields and clearer navigation.
+- Static Arc Map form added.
 - GitHub Pages workflow added.
 - GitHub Pages live test passed.
-- Issues #1 to #27 closed.
+- Issues #1 to #28 closed.
 
 ---
 
@@ -94,6 +91,7 @@ https://armpitpete.github.io/nd-romance/structure.html
 - `web/README.md`
 - `web/index.html`
 - `web/structure.html`
+- `web/arc.html`
 - `web/BROWSER_TEST_CHECKLIST.md`
 - `web/LIVE_TEST_RESULT.md`
 - `.github/workflows/pages.yml`
@@ -123,14 +121,14 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Test `https://armpitpete.github.io/nd-romance/structure.html` after deployment updates.
+1. Test `https://armpitpete.github.io/nd-romance/arc.html` after deployment updates.
 2. Add a clear link from the Mini Design page to the Structure Spine page if needed.
-3. Then build the Arc Map form.
+3. Then build the Scene Card form.
 
 ---
 
 ## Current recommendation
 
 ```text
-Test the improved Structure Spine form before adding the Arc Map form.
+Test the Arc Map form before adding the Scene Card form.
 ```
