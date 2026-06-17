@@ -12,6 +12,7 @@ FIRST_USE.md
 HOW_TO_USE_WITH_GITHUB.md
 CHANGELOG.md
 VERSION_LABEL_AUDIT.md
+WEB_INTERFACE_PROTOTYPE_PLAN.md
 ```
 
 `PROJECT_STATUS.md` shows the current state and next steps.
@@ -19,6 +20,7 @@ VERSION_LABEL_AUDIT.md
 `HOW_TO_USE_WITH_GITHUB.md` explains the repo workflow.
 `CHANGELOG.md` records the main checkpoints.
 `VERSION_LABEL_AUDIT.md` records the known version-label mismatch.
+`WEB_INTERFACE_PROTOTYPE_PLAN.md` records the planned static web interface.
 
 ## Working source
 
@@ -87,6 +89,7 @@ sample_projects/quiet_hours/Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft_v0.2.md
 - GitHub use guide added
 - changelog added
 - version label audit added
+- web interface prototype plan added
 
 ## Storage rule
 
