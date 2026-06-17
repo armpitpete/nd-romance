@@ -18,6 +18,7 @@ FIRST_USE.md
 HOW_TO_USE_WITH_GITHUB.md
 CHANGELOG.md
 VERSION_LABEL_AUDIT.md
+WEB_INTERFACE_PROTOTYPE_PLAN.md
 ```
 
 Then use blank forms from:
@@ -49,7 +50,8 @@ active_pack/
 - GitHub use guide added.
 - Changelog added.
 - Version label audit added.
-- Issues #1 to #19 closed.
+- Web interface prototype plan added.
+- Issues #1 to #20 closed.
 
 ---
 
@@ -63,6 +65,7 @@ active_pack/
 - `HOW_TO_USE_WITH_GITHUB.md`
 - `CHANGELOG.md`
 - `VERSION_LABEL_AUDIT.md`
+- `WEB_INTERFACE_PROTOTYPE_PLAN.md`
 
 ### Blank templates
 
@@ -111,13 +114,14 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Create a future issue to normalize active-pack versioned filenames, if needed.
-2. Otherwise, use the pack on a real romance project.
+1. Build a static Mini Design Sheet form.
+2. Create a future issue to normalize active-pack versioned filenames, if needed.
+3. Otherwise, use the pack on a real romance project.
 
 ---
 
 ## Current recommendation
 
 ```text
-Do not rename files until a dedicated reference-update pass is created.
+Build static Mini Design Sheet form.
 ```
