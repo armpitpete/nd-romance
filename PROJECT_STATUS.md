@@ -4,38 +4,31 @@
 
 This repo holds the working Markdown source for the ND-readable romance planning and revision pack.
 
-It is designed to help build romance stories that are:
-
-- emotionally clear
-- ND-readable
-- structurally trackable
-- low on social fog
-- practical to start without reading every file first
+The pack supports romance stories that are emotionally clear, ND-readable, structurally trackable, and practical to start.
 
 ---
 
-## Current start path
+## Start path
 
 Open first:
 
 ```text
 PROJECT_STATUS.md
 FIRST_USE.md
+HOW_TO_USE_WITH_GITHUB.md
 ```
 
-Then use clean blank templates from:
+Then use blank forms from:
 
 ```text
 templates/
 ```
 
-Or read guidance files from:
+Use fuller guidance from:
 
 ```text
 active_pack/
 ```
-
-The Mini Design Sheet is the default first file. The full Design Sheet is a deeper second-pass file.
 
 ---
 
@@ -46,29 +39,24 @@ The Mini Design Sheet is the default first file. The full Design Sheet is a deep
 - README created and updated.
 - First-use workflow added.
 - Scene-card overlap simplified.
-- Mini Design Sheet added.
-- Mini Design Sheet tested against Quiet Hours.
-- External-pressure prompt added to Mini Design Sheet.
-- Quiet Hours v1.1 mini test added.
-- Project status note added.
+- Mini Design Sheet added and tested.
+- External-pressure prompt added.
 - Clean blank templates folder added.
-- Quiet Hours Structure Template example added.
-- Quiet Hours Arc Map example added.
-- Quiet Hours Chapter 1 Scene Card added.
-- Quiet Hours Chapter 1 prose draft added.
-- Quiet Hours Chapter 1 draft review added.
-- Quiet Hours Chapter 1 prose draft v0.2 added.
-- Issues #1 to #16 closed.
+- Quiet Hours examples added.
+- Chapter 1 draft v0.2 added.
+- GitHub use guide added.
+- Issues #1 to #17 closed.
 
 ---
 
-## Current useful files
+## Key files
 
 ### Start files
 
 - `README.md`
 - `PROJECT_STATUS.md`
 - `FIRST_USE.md`
+- `HOW_TO_USE_WITH_GITHUB.md`
 
 ### Blank templates
 
@@ -79,67 +67,39 @@ The Mini Design Sheet is the default first file. The full Design Sheet is a deep
 - `templates/scene_card_blank.md`
 - `templates/beat_tracker_blank.md`
 
-### Active pack guidance
+### Sample files
 
-- `active_pack/ND_Readable_Romance_Mini_Design_Sheet_v1.0.md`
-- `active_pack/ND_Readable_Romance_Design_Sheet_v1.0.md`
-- `active_pack/ND_Readable_Romance_Structure_Template_v1.0.md`
-- `active_pack/ND_Readable_Romance_Arc_Map_v1.0.md`
-- `active_pack/ND_Readable_Romance_Scene_Card_Template_v1.0.md`
-- `active_pack/ND_Readable_Romance_Scene_Card_v1.0.md`
-- `active_pack/ND_Readable_Romance_Beat_Tracker_v1.0.md`
-- `active_pack/ND_Readable_Romance_Checklist_v1.0.md`
-- `active_pack/ND_Readable_Romance_Draft_Failure_Triage_Sheet_v1.0.md`
-- `active_pack/ND_Readable_Romance_Revision_Workflow_v1.1.md`
-- `active_pack/ND_Readable_Romance_Workflow_and_Use_Order_v1.1.md`
-- `active_pack/ND_Readable_Romance_Master_Index_v1.1.md`
-
-### Sample projects
-
-- `sample_projects/quiet_hours/Quiet_Hours_First_Use_Test.md`
-- `sample_projects/quiet_hours/Quiet_Hours_Mini_Design_Test.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Mini_Design_Test_v1.1.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Structure_Template_Example.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Arc_Map_Example.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_Scene_Card_The_Broken_Lamp.md`
-- `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft.md`
-- `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_Draft_Review.md`
 - `sample_projects/quiet_hours/Quiet_Hours_Chapter_01_The_Broken_Lamp_Draft_v0.2.md`
 
 ---
 
-## Open risk
+## Main risk
 
-The pack is usable, but still has many large guidance files.
+The pack has many guidance files, so a new user may open too much at once.
 
-Main risk:
-
-```text
-A new user may still open too many files too soon.
-```
-
-Mitigation:
+Use this order instead:
 
 ```text
-Use FIRST_USE.md and templates/ first. Do not start with checklist, triage, or revision files.
+FIRST_USE.md
+then templates/
+then active_pack/ only when guidance is needed
 ```
 
 ---
 
 ## Next useful work
 
-1. Add a short `HOW_TO_USE_WITH_GITHUB.md` note.
-2. Add a changelog.
-3. Review file naming later, because some files now say v1.0 while their content has been updated to v1.1.
+1. Add `CHANGELOG.md`.
+2. Review file naming later, because some files now say v1.0 while their content has been updated.
 
 ---
 
 ## Current recommendation
 
-Do not add more theory yet.
-
-The next best practical step is:
-
 ```text
-Add HOW_TO_USE_WITH_GITHUB.md.
+Add CHANGELOG.md.
 ```
