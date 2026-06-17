@@ -38,7 +38,7 @@ active_pack/
 Use the first web prototype from:
 
 ```text
-web/index.html
+https://armpitpete.github.io/nd-romance/
 ```
 
 ---
@@ -61,7 +61,8 @@ web/index.html
 - Web interface prototype plan added.
 - Static Mini Design Sheet form added.
 - Browser test checklist added.
-- Issues #1 to #22 closed.
+- GitHub Pages workflow added.
+- Issues #1 to #23 closed.
 
 ---
 
@@ -82,6 +83,7 @@ web/index.html
 - `web/README.md`
 - `web/index.html`
 - `web/BROWSER_TEST_CHECKLIST.md`
+- `.github/workflows/pages.yml`
 
 ### Blank templates
 
@@ -130,14 +132,15 @@ VERSION_LABEL_AUDIT.md
 
 ## Next useful work
 
-1. Test `web/index.html` using `web/BROWSER_TEST_CHECKLIST.md`.
-2. Add GitHub Pages setup notes after the test passes.
-3. Add a Structure Spine form after the Mini Design form is tested.
+1. Wait for GitHub Actions Pages deployment to finish.
+2. Open `https://armpitpete.github.io/nd-romance/`.
+3. Test the live page using `web/BROWSER_TEST_CHECKLIST.md`.
+4. Add a Structure Spine form after the Mini Design form is tested.
 
 ---
 
 ## Current recommendation
 
 ```text
-Test web/index.html using web/BROWSER_TEST_CHECKLIST.md before adding more screens.
+Wait for Pages deployment, then test https://armpitpete.github.io/nd-romance/.
 ```
