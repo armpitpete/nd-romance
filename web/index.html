@@ -1,0 +1,458 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ND Romance Builder — Mini Design Sheet</title>
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --panel: #ffffff;
+      --ink: #20262c;
+      --muted: #5b6470;
+      --line: #d8d2c8;
+      --accent: #6b4fa3;
+      --accent-dark: #4a3477;
+      --soft: #eee8f7;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+    }
+
+    header {
+      padding: 2rem 1rem 1rem;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, #ffffff 0%, var(--bg) 100%);
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+    }
+
+    h1, h2, h3 {
+      color: var(--ink);
+      line-height: 1.15;
+    }
+
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      letter-spacing: -0.04em;
+    }
+
+    h2 {
+      margin: 0 0 1rem;
+      font-size: 1.35rem;
+    }
+
+    p {
+      margin: 0 0 1rem;
+    }
+
+    .subtitle {
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .status-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .pill {
+      padding: 0.35rem 0.7rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: #ffffff;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    main {
+      padding: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(320px, 0.9fr);
+      gap: 1rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 1rem;
+      box-shadow: 0 10px 28px rgba(32, 38, 44, 0.06);
+    }
+
+    .section {
+      padding: 1rem 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .section:first-of-type {
+      border-top: 0;
+      padding-top: 0;
+    }
+
+    label {
+      display: block;
+      margin: 0.8rem 0 0.35rem;
+      font-weight: 700;
+    }
+
+    .hint {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin: -0.15rem 0 0.35rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 0.75rem;
+      font: inherit;
+      background: #fffefa;
+      color: var(--ink);
+    }
+
+    textarea {
+      min-height: 86px;
+      resize: vertical;
+    }
+
+    .small-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.8rem;
+    }
+
+    @media (max-width: 640px) {
+      .small-row {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+
+    button {
+      border: 0;
+      border-radius: 999px;
+      padding: 0.75rem 1rem;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .primary {
+      background: var(--accent);
+      color: #ffffff;
+    }
+
+    .primary:hover {
+      background: var(--accent-dark);
+    }
+
+    .secondary {
+      background: var(--soft);
+      color: var(--accent-dark);
+    }
+
+    .danger {
+      background: #f3dddd;
+      color: #7a2f2f;
+    }
+
+    .preview-card {
+      position: sticky;
+      top: 1rem;
+    }
+
+    @media (max-width: 900px) {
+      .preview-card {
+        position: static;
+      }
+    }
+
+    pre {
+      white-space: pre-wrap;
+      word-break: break-word;
+      background: #1f242b;
+      color: #f3f1ec;
+      border-radius: 14px;
+      padding: 1rem;
+      overflow: auto;
+      max-height: 65vh;
+    }
+
+    .example {
+      background: #fff8df;
+      border: 1px solid #eadba8;
+      border-radius: 14px;
+      padding: 0.85rem;
+      color: #5a4b20;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .saved {
+      color: var(--muted);
+      font-size: 0.92rem;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <h1>ND Romance Builder</h1>
+      <p class="subtitle">A small browser form for the Mini Design Sheet. Fill in the first-pass romance idea, then copy or download clean Markdown.</p>
+      <div class="status-bar" aria-label="Prototype limits">
+        <span class="pill">Static prototype</span>
+        <span class="pill">No login</span>
+        <span class="pill">No database</span>
+        <span class="pill">Markdown export only</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap grid">
+      <form class="card" id="designForm">
+        <section class="section">
+          <h2>1. Project</h2>
+          <div class="small-row">
+            <div>
+              <label for="workingTitle">Working title</label>
+              <input id="workingTitle" name="workingTitle" autocomplete="off">
+            </div>
+            <div>
+              <label for="romanceType">Romance type</label>
+              <input id="romanceType" name="romanceType" placeholder="slow-burn, second chance, quiet contemporary">
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h2>2. Central pair</h2>
+          <h3>Person A</h3>
+          <label for="personAName">Name</label>
+          <input id="personAName" name="personAName">
+          <label for="personAPattern">Current life pattern</label>
+          <textarea id="personAPattern" name="personAPattern"></textarea>
+          <label for="personAWant">What they want</label>
+          <textarea id="personAWant" name="personAWant"></textarea>
+          <label for="personAFear">What they fear in closeness</label>
+          <textarea id="personAFear" name="personAFear"></textarea>
+
+          <h3>Person B</h3>
+          <label for="personBName">Name</label>
+          <input id="personBName" name="personBName">
+          <label for="personBPattern">Current life pattern</label>
+          <textarea id="personBPattern" name="personBPattern"></textarea>
+          <label for="personBWant">What they want</label>
+          <textarea id="personBWant" name="personBWant"></textarea>
+          <label for="personBFear">What they fear in closeness</label>
+          <textarea id="personBFear" name="personBFear"></textarea>
+        </section>
+
+        <section class="section">
+          <h2>3. Why these two?</h2>
+          <p class="hint">Use specific reasons. Avoid “they balance each other.”</p>
+          <label for="whyTheseTwo">Three reasons</label>
+          <textarea id="whyTheseTwo" name="whyTheseTwo" placeholder="1.&#10;2.&#10;3."></textarea>
+        </section>
+
+        <section class="section">
+          <h2>4. Core romance engine</h2>
+          <label for="emotionalPromise">Emotional promise</label>
+          <textarea id="emotionalPromise" name="emotionalPromise"></textarea>
+          <label for="mainObstacle">Main obstacle</label>
+          <textarea id="mainObstacle" name="mainObstacle"></textarea>
+          <label for="externalPressure">External pressure</label>
+          <textarea id="externalPressure" name="externalPressure"></textarea>
+          <label for="ndTruth">ND-readable truth layer</label>
+          <textarea id="ndTruth" name="ndTruth"></textarea>
+        </section>
+
+        <section class="section">
+          <h2>5. Ending and first scene</h2>
+          <label for="endingRequirement">Ending requirement</label>
+          <textarea id="endingRequirement" name="endingRequirement"></textarea>
+          <label for="firstSceneSeed">First scene seed</label>
+          <textarea id="firstSceneSeed" name="firstSceneSeed"></textarea>
+          <label for="firstSceneJob">First scene job</label>
+          <input id="firstSceneJob" name="firstSceneJob" placeholder="first noticing, trust opening, repair attempt">
+          <label for="firstSceneChange">What changes by the end?</label>
+          <textarea id="firstSceneChange" name="firstSceneChange"></textarea>
+        </section>
+
+        <section class="section">
+          <h2>Export</h2>
+          <p class="hint">Your work is stored in this browser only. Export Markdown before clearing browser data.</p>
+          <div class="actions">
+            <button class="primary" type="button" id="copyBtn">Copy Markdown</button>
+            <button class="secondary" type="button" id="downloadBtn">Download .md</button>
+            <button class="danger" type="button" id="clearBtn">Clear form</button>
+          </div>
+          <p class="saved" id="statusText" aria-live="polite">Draft autosaves in this browser.</p>
+        </section>
+      </form>
+
+      <aside class="card preview-card">
+        <h2>Markdown preview</h2>
+        <div class="example">
+          <strong>Example from Quiet Hours:</strong><br>
+          External pressure: they work in the same public community building, where quiet private understanding is interrupted by noise, shared duties, staff expectations, and community events.
+        </div>
+        <pre id="markdownPreview"></pre>
+      </aside>
+    </div>
+  </main>
+
+  <script>
+    const storageKey = "nd-romance-builder-mini-design-v1";
+    const form = document.getElementById("designForm");
+    const preview = document.getElementById("markdownPreview");
+    const statusText = document.getElementById("statusText");
+
+    const fields = [
+      "workingTitle", "romanceType",
+      "personAName", "personAPattern", "personAWant", "personAFear",
+      "personBName", "personBPattern", "personBWant", "personBFear",
+      "whyTheseTwo", "emotionalPromise", "mainObstacle", "externalPressure", "ndTruth",
+      "endingRequirement", "firstSceneSeed", "firstSceneJob", "firstSceneChange"
+    ];
+
+    function value(id) {
+      const raw = document.getElementById(id).value.trim();
+      return raw || "";
+    }
+
+    function line(label, id) {
+      const text = value(id);
+      return `**${label}:**  ${text}\n`;
+    }
+
+    function block(label, id) {
+      const text = value(id);
+      return `**${label}:**  \n${text}\n`;
+    }
+
+    function buildMarkdown() {
+      const title = value("workingTitle") || "Untitled Romance Project";
+      return `# ${title} — Mini Design Sheet\n\n` +
+`## 1. Project\n\n` +
+line("Working title", "workingTitle") + "\n" +
+line("Romance type", "romanceType") + "\n" +
+`---\n\n` +
+`## 2. Central pair\n\n` +
+`### Person A\n\n` +
+line("Name", "personAName") + "\n" +
+block("Current life pattern", "personAPattern") + "\n" +
+block("What they want", "personAWant") + "\n" +
+block("What they fear in closeness", "personAFear") + "\n" +
+`### Person B\n\n` +
+line("Name", "personBName") + "\n" +
+block("Current life pattern", "personBPattern") + "\n" +
+block("What they want", "personBWant") + "\n" +
+block("What they fear in closeness", "personBFear") + "\n" +
+`---\n\n` +
+`## 3. Why these two?\n\n${value("whyTheseTwo")}\n\n` +
+`---\n\n` +
+`## 4. Emotional promise\n\n` + block("This romance promises the reader", "emotionalPromise") + "\n" +
+`## 5. Main obstacle\n\n` + block("Love is difficult because", "mainObstacle") + "\n" +
+`## 6. External pressure\n\n` + block("The outside pressure on this romance is", "externalPressure") + "\n" +
+`## 7. ND-readable truth layer\n\n` + block("Main ND-readable truth", "ndTruth") + "\n" +
+`## 8. Ending requirement\n\n` + block("The ending only works if", "endingRequirement") + "\n" +
+`## 9. First scene seed\n\n` +
+block("First scene idea", "firstSceneSeed") + "\n" +
+line("Scene job", "firstSceneJob") + "\n" +
+block("What changes by the end of the scene", "firstSceneChange") + "\n" +
+`---\n\n` +
+`## Next step\n\nCopy this into a project folder, then open the Structure Spine template.\n`;
+    }
+
+    function saveForm() {
+      const data = {};
+      fields.forEach(id => data[id] = document.getElementById(id).value);
+      localStorage.setItem(storageKey, JSON.stringify(data));
+      statusText.textContent = "Draft saved in this browser.";
+    }
+
+    function loadForm() {
+      const saved = localStorage.getItem(storageKey);
+      if (!saved) return;
+      const data = JSON.parse(saved);
+      fields.forEach(id => {
+        if (data[id] !== undefined) document.getElementById(id).value = data[id];
+      });
+    }
+
+    function updatePreview() {
+      preview.textContent = buildMarkdown();
+      saveForm();
+    }
+
+    function filenameFromTitle() {
+      const title = value("workingTitle") || "mini_design";
+      return title.toLowerCase().replace(/[^a-z0-9]+/g, "_").replace(/^_+|_+$/g, "") + "_mini_design.md";
+    }
+
+    document.getElementById("copyBtn").addEventListener("click", async () => {
+      await navigator.clipboard.writeText(buildMarkdown());
+      statusText.textContent = "Markdown copied.";
+    });
+
+    document.getElementById("downloadBtn").addEventListener("click", () => {
+      const blob = new Blob([buildMarkdown()], { type: "text/markdown;charset=utf-8" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = filenameFromTitle();
+      a.click();
+      URL.revokeObjectURL(url);
+      statusText.textContent = "Markdown downloaded.";
+    });
+
+    document.getElementById("clearBtn").addEventListener("click", () => {
+      if (!confirm("Clear this browser draft?")) return;
+      fields.forEach(id => document.getElementById(id).value = "");
+      localStorage.removeItem(storageKey);
+      updatePreview();
+      statusText.textContent = "Form cleared.";
+    });
+
+    form.addEventListener("input", updatePreview);
+    loadForm();
+    updatePreview();
+  </script>
+</body>
+</html>
