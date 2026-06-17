@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ND Romance Builder - Scene Draft Prompt</title>
+<style>
+body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;line-height:1.5}header,main{max-width:1100px;margin:auto;padding:1rem}.grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem}@media(max-width:800px){.grid{grid-template-columns:1fr}}section,aside{background:white;border:1px solid #d8d2c8;border-radius:16px;padding:1rem}label{display:block;font-weight:700;margin-top:.8rem}input,textarea{width:100%;font:inherit;padding:.7rem;border:1px solid #d8d2c8;border-radius:10px}textarea{min-height:80px}button{margin:.5rem .3rem .5rem 0;padding:.7rem 1rem;border:0;border-radius:999px;font-weight:700;background:#6b4fa3;color:white}pre{white-space:pre-wrap;background:#20262c;color:white;padding:1rem;border-radius:12px}a{color:#4a3477}.nav a{display:inline-block;margin-right:.7rem}.next{font-weight:700}
+</style>
+</head>
+<body>
+<header>
+<h1>Scene Draft Prompt</h1>
+<p>Use a completed Scene Card to create a clean drafting prompt. This page does not call an API yet.</p>
+<p class="nav"><a href="./">Mini Design</a><a href="structure.html">Structure Spine</a><a href="arc.html">Arc Map</a><a href="scene.html">Scene Card</a></p>
+</header>
+<main class="grid">
+<section>
+<label>Project title <input id="project"></label>
+<label>Scene title <input id="title"></label>
+<label>Point of view <input id="pov"></label>
+<label>Draft length target <input id="length" placeholder="800 words, 1,200 words, short scene"></label>
+<label>Tone / style note <textarea id="style"></textarea></label>
+<label>Scene job <textarea id="job"></textarea></label>
+<label>Start state <textarea id="start"></textarea></label>
+<label>Scene conditions <textarea id="conditions"></textarea></label>
+<label>Bond evidence <textarea id="bond"></textarea></label>
+<label>Misread / accuracy map <textarea id="misread"></textarea></label>
+<label>Beat map <textarea id="beats"></textarea></label>
+<label>Dialogue / subtext <textarea id="dialogue"></textarea></label>
+<label>Scene-end change <textarea id="change"></textarea></label>
+<button id="copy" type="button">Copy Prompt</button>
+<button id="download" type="button">Download .md</button>
+<button id="clear" type="button">Clear</button>
+<p id="status">Autosaves in this browser.</p>
+</section>
+<aside>
+<h2>Draft prompt preview</h2>
+<pre id="preview"></pre>
+</aside>
+</main>
+<script>
+const ids=['project','title','pov','length','style','job','start','conditions','bond','misread','beats','dialogue','change'];
+const key='ndrb-draft-prompt-v1';
+const el=id=>document.getElementById(id);
+const v=id=>el(id).value.trim();
+function promptText(){return `# ${v('project')||'Untitled Project'} - Scene Draft Prompt\n\n## Task\n\nWrite a prose scene from the Scene Card below.\n\n## Scene details\n\n**Scene title:** ${v('title')}\n\n**Point of view:** ${v('pov')}\n\n**Draft length target:** ${v('length')}\n\n**Tone / style note:**\n${v('style')}\n\n## Scene Card input\n\n**Scene job:**\n${v('job')}\n\n**Start state:**\n${v('start')}\n\n**Scene conditions:**\n${v('conditions')}\n\n**Bond evidence:**\n${v('bond')}\n\n**Misread / accuracy map:**\n${v('misread')}\n\n**Beat map:**\n${v('beats')}\n\n**Dialogue / subtext:**\n${v('dialogue')}\n\n**Scene-end change:**\n${v('change')}\n\n## Writing rules\n\n- Stay in the chosen point of view.\n- Follow the beat map.\n- Show care through behaviour, not explanation.\n- Keep emotional meaning clear.\n- Avoid vague social fog.\n- Avoid melodrama unless the style note asks for it.\n- Do not over-explain neurodivergence.\n- Use plain readable language.\n- End with the required scene-end change.\n\n## Draft space\n\n`;}
+function save(){const d={};ids.forEach(id=>d[id]=el(id).value);localStorage.setItem(key,JSON.stringify(d));el('preview').textContent=promptText();}
+function load(){const d=JSON.parse(localStorage.getItem(key)||'{}');ids.forEach(id=>{if(d[id])el(id).value=d[id];});save();}
+el('copy').onclick=async()=>{await navigator.clipboard.writeText(promptText());el('status').textContent='Prompt copied.';};
+el('download').onclick=()=>{const b=new Blob([promptText()],{type:'text/markdown'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='scene_draft_prompt.md';a.click();};
+el('clear').onclick=()=>{ids.forEach(id=>el(id).value='');localStorage.removeItem(key);save();};
+ids.forEach(id=>el(id).addEventListener('input',save));load();
+</script>
+</body>
+</html>
