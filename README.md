@@ -39,11 +39,32 @@ active_pack/
 8. Draft Failure Triage
 9. Revision Workflow
 
+## Sample project
+
+A small first-use test project is available here:
+
+```text
+sample_projects/quiet_hours/Quiet_Hours_First_Use_Test.md
+```
+
+Use it to see how the pack works on a simple romance idea.
+
 ## Current status
 
 - active pack imported
 - scene-card overlap simplified
 - first-use workflow added
+- sample first-use test added
+
+## Current finding
+
+The first-use workflow works, but the full Design Sheet is still heavy for a first session.
+
+Next useful improvement:
+
+```text
+Add a one-page mini design sheet.
+```
 
 ## Storage rule
 
