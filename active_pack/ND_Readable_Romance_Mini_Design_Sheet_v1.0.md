@@ -1,4 +1,4 @@
-# ND Readable Romance Mini Design Sheet v1.0
+# ND Readable Romance Mini Design Sheet v1.1
 
 ## Purpose
 
@@ -20,6 +20,7 @@ Good enough means you can answer:
 - who are the two people?
 - why these two?
 - what makes love difficult?
+- what outside pressure affects the romance?
 - what ND-readable truth matters?
 - what must the ending prove?
 
@@ -98,7 +99,28 @@ This should be a real obstacle, not a fake misunderstanding.
 
 ---
 
-# 6. ND-readable truth layer
+# 6. External pressure
+
+Complete this sentence:
+
+**The outside pressure on this romance is:**  
+
+Examples:
+
+- work roles
+- family pressure
+- public setting
+- time limit
+- shared project
+- money or housing pressure
+- community expectations
+- health, travel, distance, or duty
+
+Keep this short. The Structure Template can develop it later.
+
+---
+
+# 7. ND-readable truth layer
 
 This romance takes seriously:
 
@@ -117,7 +139,7 @@ This romance takes seriously:
 
 ---
 
-# 7. Ending requirement
+# 8. Ending requirement
 
 Complete this sentence:
 
@@ -127,7 +149,7 @@ Name the change, not just the mood.
 
 ---
 
-# 8. First scene seed
+# 9. First scene seed
 
 **First scene idea:**  
 
@@ -137,7 +159,7 @@ Name the change, not just the mood.
 
 ---
 
-# 9. Move next
+# 10. Move next
 
 After filling this in, choose one next file.
 
@@ -153,6 +175,7 @@ Stop when you have:
 
 - one simple romance definition
 - one real obstacle
+- one external pressure
 - one ND-readable truth
 - one ending requirement
 - one first scene seed
