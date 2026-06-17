@@ -96,3 +96,9 @@ Stop the first session when you have:
 - one planned scene
 
 That is enough to begin.
+
+## Next session
+
+After the first session, open the Beat Tracker and map 5 to 10 rough beats.
+
+Then draft or plan only the next scene.
