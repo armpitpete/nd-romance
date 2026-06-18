@@ -27,6 +27,7 @@ body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;
 <label>Repair / recognition <textarea id="repair"></textarea></label>
 <label>Ending state <textarea id="ending"></textarea></label>
 <label>Chapter arc rows <textarea id="rows" placeholder="1 | stage | change | pressure or clarity | end state"></textarea></label>
+<button id="loadStructure" type="button">Load from Structure Spine</button>
 <button id="copy" type="button">Copy Markdown</button>
 <button id="download" type="button">Download .md</button>
 <button id="clear" type="button">Clear</button>
@@ -40,11 +41,14 @@ body{font-family:system-ui,sans-serif;margin:0;background:#f6f4ef;color:#20262c;
 <script>
 const ids=['title','pair','start','first','pattern','trust','pressure','turn','repair','ending','rows'];
 const key='ndrb-arc-v1';
+const structureKey='ndrb-structure-v2';
 const el=id=>document.getElementById(id);
 const v=id=>el(id).value.trim();
 function md(){return `# ${v('title')||'Untitled'} - Arc Map\n\n## Project\n\n**Primary pair:** ${v('pair')}\n\n## Relationship arc\n\n**Starting state:**\n${v('start')}\n\n**First change:**\n${v('first')}\n\n**Pattern formation:**\n${v('pattern')}\n\n**Trust opening:**\n${v('trust')}\n\n**Pressure stage:**\n${v('pressure')}\n\n**Major turn:**\n${v('turn')}\n\n**Repair / recognition:**\n${v('repair')}\n\n**Ending state:**\n${v('ending')}\n\n## Chapter arc grid\n\n${v('rows')}\n\n## Next step\n\nUse this to create the first Scene Card.\n`;}
 function save(){const d={};ids.forEach(id=>d[id]=el(id).value);localStorage.setItem(key,JSON.stringify(d));el('preview').textContent=md();}
 function load(){const d=JSON.parse(localStorage.getItem(key)||'{}');ids.forEach(id=>{if(d[id])el(id).value=d[id];});save();}
+function loadStructure(){const raw=localStorage.getItem(structureKey);if(!raw){el('status').textContent='No saved Structure Spine found.';return;}let d;try{d=JSON.parse(raw);}catch(e){el('status').textContent='Saved Structure Spine could not be read.';return;}el('title').value=d.title||'';el('pair').value=d.pair||'';el('start').value=d.opening||'';el('first').value=d.bond||'';el('pressure').value=d.pressure||'';el('turn').value=d.midpoint||'';el('repair').value=d.repair||'';el('ending').value=d.ending||'';el('rows').value=d.chapters||'';save();el('status').textContent='Loaded from Structure Spine.';}
+el('loadStructure').onclick=loadStructure;
 el('copy').onclick=async()=>{await navigator.clipboard.writeText(md());el('status').textContent='Copied.';};
 el('download').onclick=()=>{const b=new Blob([md()],{type:'text/markdown'});const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='arc_map.md';a.click();};
 el('clear').onclick=()=>{ids.forEach(id=>el(id).value='');localStorage.removeItem(key);save();};
